@@ -1,0 +1,37 @@
+project:
+  name: TEDM
+  version: 1.0.0
+model:
+  text_model: bert-base-uncased
+  text_dim: 768
+  visual_model: resnet18
+  video_dim: 512
+  audio:
+    sample_rate: 16000
+    n_mfcc: 40
+    n_fft: 512
+    win_length: 400
+    hop_length: 160
+    summary: mean_std
+    output_dim: 80
+  latent_dim: 256
+  gru_hidden: 256
+  gru_layers: 1
+  transformer_layers: 2
+  attention_heads: 4
+  feedforward_dim: 512
+  dropout: 0.1
+training:
+  optimizer: adam
+  learning_rate: 0.0001
+  batch_size: 8
+  max_epochs: 50
+  early_stopping_patience: 5
+  scheduler: cosine_annealing
+  seeds: [11, 22, 33, 44, 55]
+  threshold: 0.5
+split:
+  train: 0.8
+  validation: 0.1
+  test: 0.1
+  seed: 2026

@@ -1,0 +1,2 @@
+import argparse,torch,matplotlib.pyplot as plt
+p=argparse.ArgumentParser();p.add_argument('--tensor',required=True,help='Saved [turn,hidden] drift tensor');p.add_argument('--out',default='results/emotion_drift.png');a=p.parse_args();d=torch.load(a.tensor,map_location='cpu').float();score=d.norm(dim=-1).numpy();plt.figure();plt.plot(range(len(score)),score,marker='o');plt.xlabel('Dialogue turn');plt.ylabel('Emotion-drift magnitude');plt.tight_layout();plt.savefig(a.out,dpi=200)

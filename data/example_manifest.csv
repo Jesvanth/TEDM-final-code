@@ -1,0 +1,2 @@
+dialogue_id,turn_index,text,audio_path,video_path,label
+example_001,0,"Example utterance",/path/audio.wav,/path/video.mp4,0

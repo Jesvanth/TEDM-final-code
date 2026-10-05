@@ -1,0 +1,2 @@
+Code Availability
+The source code and configuration required to reproduce the TEDM experimental pipeline are available in the accompanying repository. Following archival release, replace this sentence with the permanent DOI assigned by the selected DOI-issuing repository. No DOI has been fabricated in this package.
